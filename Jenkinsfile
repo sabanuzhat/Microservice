@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t sabadevops/recommendationservice:latest ."
+                        sh "docker build -t sabanuzhat/recommendationservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push sabadevops/recommendationservice:latest "
+                        sh "docker push sabanuzhat/recommendationservice:latest "
                     }
                 }
             }
